@@ -30,6 +30,7 @@ OpenAI Codex 기반의 코드 어시스턴트를 만들어 가는 개인 학습 
 ## 학습 주차별 배운점
 
 - 1일차 (1~6강) · [최종 결과물에서 출발해 에이전트의 동작을 이해하는 이유](https://xeulbn-dev.tistory.com/62)
+- 2일차 (6~9강) · [.md지침 파일은 하네스의 기본 (AI Agent의 지침 계층과 Context와 memory 구조 이해하기)](https://xeulbn-dev.tistory.com/64)
 
 ## 참고 강의
 

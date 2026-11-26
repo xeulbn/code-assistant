@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apple의 2026년 4분기 실적, 실제 종가 추이, 최근 발표와 사업 리스크를 살펴보는 기업 분석 페이지.">
+  <meta name="color-scheme" content="light">
+  <title>Apple 분석 | 기업노트</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#overview" aria-label="기업노트, 개요로 이동">기업노트<span>.</span></a>
+      <nav aria-label="본문 탐색">
+        <a href="#overview" aria-current="location">개요</a>
+        <a href="#financials">재무 요약</a>
+        <a href="#news">최근 뉴스</a>
+        <a href="#risks">리스크</a>
+      </nav>
+      <span class="header-caption">APPLE 분석</span>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <section id="overview" class="overview" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><strong>Apple Inc.</strong><span>NASDAQ: AAPL</span></p>
+        <h1 id="page-title">Apple의 성장,<br>다음은 <span>이익의 질.</span></h1>
+        <p class="hero-description">4분기 매출은 11.7% 증가했습니다. iPhone이 이끈 성장과 관세 환급이 높인 마진을 나눠 봅니다.<sup><a href="#source-1" aria-label="출처 1">[1]</a><a href="#source-2" aria-label="출처 2">[2]</a></sup></p>
+        <a class="primary-link" href="#financials">재무 요약 보기</a>
+      </div>
+      <figure class="revenue-figure">
+        <div class="donut-wrap">
+          <svg class="donut" viewBox="0 0 260 260" role="img" aria-labelledby="donut-title donut-desc">
+            <title id="donut-title">2026 회계연도 4분기 매출 구성</title>
+            <desc id="donut-desc">iPhone 50.3%, 서비스 27.6%, 기타 제품 22.1%. 합계 1,144.77억 달러.</desc>
+            <circle cx="130" cy="130" r="98" fill="none" stroke="#e0e5ec" stroke-width="31" />
+            <circle cx="130" cy="130" r="98" fill="none" stroke="#8996ac" stroke-width="31" pathLength="100" stroke-dasharray="27.58 72.42" stroke-dashoffset="-50.3" transform="rotate(-90 130 130)" />
+            <circle cx="130" cy="130" r="98" fill="none" stroke="#315dba" stroke-width="31" pathLength="100" stroke-dasharray="50.3 49.7" transform="rotate(-90 130 130)" />
+          </svg>
+          <div class="donut-label" aria-hidden="true"><span>iPhone 비중</span><strong>50.3<span>%</span></strong></div>
+        </div>
+        <figcaption>4분기 매출의 절반은 여전히 iPhone<sup><a href="#source-2" aria-label="출처 2">[2]</a></sup></figcaption>
+        <div class="donut-legend"><span class="legend-iphone">iPhone 50.3%</span><span class="legend-services">서비스 27.6%</span><span class="legend-other">기타 22.1%</span></div>
+      </figure>
+      <div class="overview-note">
+        <p><strong>이번 실적의 해석</strong>서비스 매출은 9.8% 늘었지만 iPad와 웨어러블·홈·액세서리는 감소했습니다. 모든 사업이 함께 성장한 분기는 아닙니다.<sup><a href="#source-2" aria-label="출처 2">[2]</a></sup></p>
+      </div>
+    </section>
+
+    <section id="financials" class="section financials" aria-labelledby="financials-title">
+      <div class="section-heading">
+        <h2 id="financials-title">재무 요약</h2>
+        <p>성장의 크기와 수익성을 함께 봅니다.<sup><a href="#source-2" aria-label="출처 2">[2]</a></sup></p>
+      </div>
+      <div class="financial-toolbar">
+        <p id="financial-period">2026.06.28 ~ 2026.09.26 / 전년 동기 대비</p>
+        <div class="segmented" role="group" aria-label="재무 자료 기간">
+          <button type="button" data-financial="quarter" aria-pressed="true">4분기</button>
+          <button type="button" data-financial="annual" aria-pressed="false">연간</button>
+        </div>
+      </div>
+      <div class="metrics" aria-live="polite" aria-atomic="true">
+        <article class="metric"><h3>매출</h3><p><strong id="metric-revenue">114.48</strong><span>십억 달러</span></p><span id="growth-revenue" class="growth">+11.7%</span></article>
+        <article class="metric"><h3>영업이익</h3><p><strong id="metric-operatingIncome">35.63</strong><span>십억 달러</span></p><span id="growth-operatingIncome" class="growth">+9.9%</span></article>
+        <article class="metric"><h3>순이익</h3><p><strong id="metric-netIncome">30.71</strong><span>십억 달러</span></p><span id="growth-netIncome" class="growth">+11.8%</span></article>
+        <article class="metric"><h3>희석 주당순이익</h3><p><strong id="metric-eps">2.10</strong><span>달러</span></p><span id="growth-eps" class="growth">+13.5%</span></article>
+      </div>
+      <div class="financial-detail">
+        <div class="revenue-breakdown">
+          <h3>어디에서 매출이 나왔나</h3>
+          <p class="small-note">십억 달러 / 괄호는 전년 대비 변화</p>
+          <div id="category-list"></div>
+        </div>
+        <aside class="margin-note" aria-labelledby="margin-title">
+          <h3 id="margin-title">마진에는 환급 효과가 섞여 있습니다</h3>
+          <p class="margin-value"><strong>47.9</strong><span>%</span></p>
+          <p>4분기 매출총이익률에는 관세 환급 효과 약 <strong>1%p</strong>가 포함됐습니다. 보고된 수익성을 다음 분기에 그대로 대입하기 어렵습니다.<sup><a href="#source-1" aria-label="출처 1">[1]</a></sup></p>
+          <p class="interpretation">해석: 다음 실적에서는 환급 효과와 부품 원가를 분리해 확인할 필요가 있습니다.<sup><a href="#source-3" aria-label="출처 3">[3]</a></sup></p>
+        </aside>
+      </div>
+
+      <figure class="price-panel" aria-labelledby="price-title">
+        <div class="price-topline">
+          <div><h3 id="price-title">AAPL 가격 변동</h3><p class="small-note">미국 정규장 종가 / USD<sup><a href="#source-4" aria-label="출처 4">[4]</a></sup></p></div>
+          <div class="segmented" role="group" aria-label="주가 차트 기간">
+            <button type="button" data-range="22" aria-pressed="true">1개월</button>
+            <button type="button" data-range="10" aria-pressed="false">10거래일</button>
+            <button type="button" data-range="5" aria-pressed="false">5거래일</button>
+          </div>
+        </div>
+        <div class="price-summary"><strong>$354.07</strong><span id="price-return">+2.95%</span><span id="price-period">2026.10.26 ~ 2026.11.24</span></div>
+        <div class="chart-container">
+          <svg id="price-chart" viewBox="0 0 960 300" role="img" aria-labelledby="chart-title chart-desc">
+            <title id="chart-title">AAPL 정규장 종가 추이</title>
+            <desc id="chart-desc">2026년 10월 26일 343.91달러에서 11월 24일 354.07달러로 2.95% 상승했습니다. 아래 종가 표에서 날짜별 값을 확인할 수 있습니다.</desc>
+          </svg>
+          <div class="chart-tooltip" id="chart-tooltip" aria-hidden="true" hidden></div>
+        </div>
+        <div class="chart-selection"><label for="price-cursor">날짜별 확인</label><input id="price-cursor" type="range" min="0" max="21" value="21" aria-describedby="selected-price"><output id="selected-price" for="price-cursor" aria-live="polite">2026.11.24 / $354.07</output></div>
+        <figcaption class="chart-caption">구간 첫 종가 대비 변화율입니다. 배당 재투자는 반영하지 않았으며, 세로축은 0에서 시작하지 않습니다.</figcaption>
+        <details class="price-data"><summary>날짜별 종가 표</summary><div class="table-wrap"><table><caption id="price-table-caption">선택한 기간의 AAPL 정규장 종가</caption><thead><tr><th scope="col">날짜</th><th scope="col">종가 (USD)</th></tr></thead><tbody id="price-table-body"></tbody></table></div></details>
+      </figure>
+      <noscript><p class="noscript-note">차트와 기간 선택은 JavaScript가 필요합니다. 기본 4분기 실적은 위에서 확인할 수 있습니다.</p></noscript>
+    </section>
+
+    <section id="news" class="section news" aria-labelledby="news-title">
+      <div class="section-heading"><h2 id="news-title">최근 뉴스</h2><p>새 발표가 사업에 더하는 것과, 아직 확인할 수 없는 것.</p></div>
+      <div class="news-list">
+        <article class="news-item"><time datetime="2026-11-19">2026.11.19</time><div><h3>Apple TV, 미국 F1 ACADEMY 중계 확대</h3><p>2027년부터 예선과 경기를 제공할 예정입니다. 스포츠 콘텐츠를 넓히지만, 계약 금액과 구독 증가 효과는 이번 발표에서 확인되지 않습니다.<sup><a href="#source-5" aria-label="출처 5">[5]</a></sup></p></div><span class="news-topic">서비스</span></article>
+        <article class="news-item"><time datetime="2026-11-15">2026.11.15</time><div><h3>OpenEvidence와 건강 AI 사용 연구 시작</h3><p>미국에서 대화형 건강 AI의 신뢰와 사용 경험을 연구합니다. 연구 착수 단계로, 상용 서비스의 매출 성과를 뜻하지는 않습니다.<sup><a href="#source-6" aria-label="출처 6">[6]</a></sup></p></div><span class="news-topic">AI</span></article>
+        <article class="news-item"><time datetime="2026-11-13">2026.11.13</time><div><h3>HomeView 출시, 가정용 기기로 AI 접점 확장</h3><p>Siri AI를 탑재한 홈 디스플레이 판매를 시작했습니다. EU에서는 판매하지 않아 지역별 출시 범위가 다릅니다. 기존 홈 사업의 반등 여부는 후속 실적이 필요합니다.<sup><a href="#source-7" aria-label="출처 7">[7]</a></sup></p></div><span class="news-topic">하드웨어</span></article>
+      </div>
+    </section>
+
+    <section id="risks" class="section risks" aria-labelledby="risks-title">
+      <div class="section-heading"><h2 id="risks-title">리스크</h2><p>이번 성장 수치와 함께 읽어야 할 세 가지 변수.</p></div>
+      <div class="risk-list">
+        <article><h3>부품 원가가<br>마진을 누를 수 있습니다</h3><p>연차보고서는 메모리·스토리지의 공급 제약과 비용 상승이 심화될 수 있다고 설명합니다. 환급으로 높아진 4분기 마진과 반대 방향으로 작용할 수 있습니다.<sup><a href="#source-1" aria-label="출처 1">[1]</a><a href="#source-3" aria-label="출처 3">[3]</a></sup></p></article>
+        <article><h3>iPhone에 대한<br>매출 의존이 남아 있습니다</h3><p>4분기 iPhone 비중은 50.3%입니다. iPad와 웨어러블·홈·액세서리가 감소한 만큼, iPhone 교체 수요가 약해질 때 다른 제품의 상쇄 여력은 불확실합니다.<sup><a href="#source-2" aria-label="출처 2">[2]</a></sup></p></article>
+        <article><h3>서비스 확대에도<br>규제 변수가 붙습니다</h3><p>EU 디지털시장법에 대응한 앱 유통·결제·수수료 구조 변경이 진행 중입니다. 서비스의 성장과 기존 수익 구조의 유지를 같은 의미로 볼 수 없습니다.<sup><a href="#source-3" aria-label="출처 3">[3]</a></sup></p></article>
+      </div>
+      <aside class="missing-data" aria-labelledby="missing-title">
+        <div><span class="missing-label">자료의 공백</span><h3 id="missing-title">아직 숫자로<br>말할 수 없는 부분</h3></div>
+        <dl>
+          <div><dt>AI·HomeView의 개별 매출</dt><dd>확인한 실적 자료는 이를 별도로 구분하지 않습니다. 새 제품과 AI 기능이 매출을 얼마나 늘렸는지 계산할 수 없습니다.<sup><a href="#source-2" aria-label="출처 2">[2]</a><a href="#source-7" aria-label="출처 7">[7]</a></sup></dd></div>
+          <div><dt>스포츠 중계 계약의 수익성</dt><dd>확인한 발표에 계약 금액과 신규 구독 기여가 없습니다. 콘텐츠 확대가 이익 개선으로 이어지는지 판단할 수 없습니다.<sup><a href="#source-5" aria-label="출처 5">[5]</a></sup></dd></div>
+          <div><dt>현재 시점의 실시간 주가</dt><dd>이 페이지는 확보한 11월 24일 정규장 종가를 저장해 사용합니다. 이후 가격과 장중 움직임은 반영하지 않습니다.<sup><a href="#source-4" aria-label="출처 4">[4]</a></sup></dd></div>
+        </dl>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="sources-footer">
+    <div class="page">
+      <div class="sources-heading"><h2>출처</h2><p>작성: 2026.11.25 17:08 KST / 자료 기준: 재무 2026.09.26, 주가 2026.11.24 미국장, 뉴스 2026.11.25 확인</p></div>
+      <ol class="sources-list">
+        <li id="source-1"><a href="https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/" target="_blank" rel="noopener noreferrer">Apple, 2026 회계연도 4분기 실적 발표</a><span>2026.11.02 / 마진과 관세 환급</span></li>
+        <li id="source-2"><a href="https://www.apple.com/newsroom/pdfs/fy2026q4/FY26_Q4_Consolidated_Financial_Statements.pdf" target="_blank" rel="noopener noreferrer">Apple, 4분기·연간 연결재무제표</a><span>2026.09.26 결산 / 금액·성장률·매출 비중</span></li>
+        <li id="source-3"><a href="https://s2.q4cdn.com/470004039/files/doc_earnings/2026/q4/filing/10K-Q4-2026-as-filed.pdf" target="_blank" rel="noopener noreferrer">Apple, 2026 Form 10-K</a><span>본문 3·9·16쪽 / 공급망·부품 원가·DMA</span></li>
+        <li id="source-4"><a href="https://finance.yahoo.com/quote/AAPL/history/" target="_blank" rel="noopener noreferrer">Yahoo Finance, AAPL Historical Data</a><span>2026.10.26 ~ 11.24 / Close 열, 배당 조정 전 종가</span></li>
+        <li id="source-5"><a href="https://www.apple.com/newsroom/2026/11/apple-tv-becomes-the-new-us-home-of-f1-academy-the-all-female-racing-series/" target="_blank" rel="noopener noreferrer">Apple, F1 ACADEMY 미국 중계 발표</a><span>2026.11.19</span></li>
+        <li id="source-6"><a href="https://www.apple.com/newsroom/2026/11/apple-launches-research-study-to-explore-the-use-of-ai-for-health/" target="_blank" rel="noopener noreferrer">Apple, 건강 AI 사용 연구 발표</a><span>2026.11.15</span></li>
+        <li id="source-7"><a href="https://www.apple.com/newsroom/2026/11/apple-homeview-available-today/" target="_blank" rel="noopener noreferrer">Apple, HomeView 출시 발표</a><span>2026.11.13</span></li>
+      </ol>
+      <p class="method-note">금액은 달러 기준입니다. 성장률·매출 비중은 공시 원수치에서 계산해 반올림했으며, ‘해석’과 향후 영향에 관한 문장은 위 자료를 바탕으로 작성했습니다. 링크는 새 탭에서 열립니다.</p>
+      <div class="footer-bottom"><span class="wordmark">기업노트<span>.</span></span><span>Apple 기업 분석</span></div>
+    </div>
+  </footer>
+</body>
+</html>
